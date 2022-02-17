@@ -1,20 +1,29 @@
 
+"""
+This module includes all the functions that get the input from
+console, check the validation and return the result.
+"""
+
 from classes import Person
 
 data = Person.data
 
 
 def service(role):
-        service = {
-                    'student': [ 'check menu', 'check order', 'update order', 'change password'],
-                    'staff': ['check menu', 'update menu', 'check total', 
-                                'check student', 'add student', 'update student', 
-                                'delete student','change password']
+    """
+    This is a function that display the operation. It takes a role as an agrument,
+    and decide which interface to display.
+    """
+    service = {
+                'student': [ 'check menu', 'check order', 'update order', 'change password'],
+                'staff': ['check menu', 'update menu', 'check total', 
+                         'check student', 'add student', 'update student', 
+                         'delete student','change password']
                 }    
-        print("*******************************")
-        for i in list(enumerate(service[role],start = 1)):
-            print(f"{i[0]} . {i[1]}")
-        print("*******************************")
+    print("*******************************")
+    for i in list(enumerate(service[role],start = 1)):
+        print(f"{i[0]} . {i[1]}")
+    print("*******************************")
 
 
 def get_data(role):
@@ -26,6 +35,7 @@ def get_id(role):
     ids = list(data.keys())
     while True:        
         id = input('Enter ID: ')
+        id = id.lower()
         if id not in ids:
             print("This id is not in the system")
             continue

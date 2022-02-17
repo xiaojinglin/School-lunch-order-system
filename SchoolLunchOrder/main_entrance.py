@@ -3,6 +3,10 @@ import student_entrance
 import staff_entrance
 
 def main():
+    """
+    This is the first operation window. User can choose a role and start.
+    it also check the validation of the input value.
+    """
     while True:
         role = input("Choose your role(enter 'q' to quit): 1.student 2.staff: ")
         if role == 'q':

@@ -14,6 +14,10 @@ def update_order(stu):
 
 
 def stu_entr():
+    """
+    This is the operation window for student. It takes the input, check the validation,
+    and display the feedback
+    """
     stu_id = get_input.get_id('student')
     get_input.check_pwd(stu_id, 'student')
     stu = Student(stu_id)

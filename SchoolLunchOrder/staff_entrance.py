@@ -37,6 +37,10 @@ def del_stu(staff):
 
 
 def staff_entr():
+    """
+    This is the operation window for staff. It takes the input, check the validation,
+    and display the feedback
+    """
     staff_id = get_input.get_id('staff')
     get_input.check_pwd(staff_id, 'staff')
     staff = Staff(staff_id)
